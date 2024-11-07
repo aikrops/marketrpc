@@ -1,11 +1,16 @@
-import grpc
-from grpc import RpcError
 import json
 import time
+import grpc
+import logging
 from datetime import datetime
+# import sys
+# import os
+# current_dir = os.path.dirname(os.path.abspath(__file__))
+# sys.path.append(current_dir)
+# utils_dir = os.path.abspath(os.path.join(current_dir, '..'))
+# sys.path.append(utils_dir)
 import market_history_pb2
 import market_history_pb2_grpc
-import logging
 
 logging.basicConfig(level=logging.INFO,format="[%(name)s][%(asctime)s][%(filename)s:%(lineno)d]\t%(levelname)s\t%(message)s",)
 
@@ -388,32 +393,32 @@ def market_orderbook(
 #         # logging.info(f"{item}")
 #         logging.info(f"{item['Time']}")
 
-    # 查询市场交易数据
-    # result = market_aggtrade(
-    #     exchange="binance",
-    #     account_type="future",
-    #     symbol="btcusdt",
-    #     start_time=start_time,
-    #     end_time=end_time,
-    #     limit = 5,
-    #     is_asc=True,
-    #     is_gzip=False
-    # )
-    # logging.info(f"获取长度 {len(result[0])} 条数据")
-    # for item in (result[0]):
-    #     logging.info(f"{item}")
+#     # 查询市场交易数据
+#     result = market_aggtrade(
+#         exchange="binance",
+#         account_type="future",
+#         symbol="btcusdt",
+#         start_time=start_time,
+#         end_time=end_time,
+#         limit = 5,
+#         is_asc=True,
+#         is_gzip=False
+#     )
+#     logging.info(f"获取长度 {len(result[0])} 条数据")
+#     for item in (result[0]):
+#         logging.info(f"{item}")
 
-    # 查询市场订单簿数据
-    # result = market_orderbook(
-    #     exchange="binance",
-    #     account_type="future",
-    #     symbol="btcusdt",
-    #     start_time=start_time,
-    #     end_time=end_time,
-    #     limit = 5,
-    #     is_asc=True,
-    #     is_gzip=False
-    # )
-    # logging.info(f"获取长度 {len(result[0])} 条数据")
-    # for item in (result[0]):
-    #     logging.info(f"{item['Time']}")
+#     # 查询市场订单簿数据
+#     result = market_orderbook(
+#         exchange="binance",
+#         account_type="future",
+#         symbol="btcusdt",
+#         start_time=start_time,
+#         end_time=end_time,
+#         limit = 5,
+#         is_asc=True,
+#         is_gzip=False
+#     )
+#     logging.info(f"获取长度 {len(result[0])} 条数据")
+#     for item in (result[0]):
+#         logging.info(f"{item['Time']}")
