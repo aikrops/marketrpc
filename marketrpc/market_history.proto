@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package ="grpc/market_history";
+package market_history;
+service MarketHistoryService {
+  rpc queryData (DataRequest) returns (DataReply);
+}
+
+message DataRequest{
+  string type = 1;
+  string jsonData = 2;
+}
+
+message DataReply{
+  int32 code = 1;
+  string msg = 2;
+  bool success = 3;
+  string type = 4;
+  string jsonData = 5;
+}
