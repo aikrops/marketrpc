@@ -3,10 +3,10 @@ import time
 import grpc
 import logging
 from datetime import datetime
-# import sys
-# import os
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# sys.path.append(current_dir)
+import sys
+import os
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(current_dir)
 # utils_dir = os.path.abspath(os.path.join(current_dir, '..'))
 # sys.path.append(utils_dir)
 import market_history_pb2
